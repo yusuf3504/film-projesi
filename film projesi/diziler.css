@@ -1,0 +1,341 @@
+/* Genel ayarlar */
+* {
+    margin: 0;
+}
+
+/* Tema değişkenleri */
+:root {
+    --bg-color-light: #ffffff;
+    --text-color-light: #000000;
+    --bg-color-dark: #000000;
+    --text-color-dark: #ffffff;
+    --navbar-bg-color-light: #f8f9fa;
+    --navbar-bg-color-dark: #000000;
+    --sidebar-bg-color-light: #f8f9fa;
+    --sidebar-bg-color-dark: #000000;
+    --button-bg-color-light: #007bff;
+    --button-bg-color-dark: #0056b3;
+    --toggle-ball-light: #ffffff;
+    --toggle-ball-dark: #ffcc00;
+}
+
+/* Light tema */
+body.light-theme {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+}
+
+/* Dark tema */
+body.dark-theme {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+/* Navbar */
+.navbar {
+    background-color:white;
+    color: var(--text-color-light);
+}
+
+body.dark-theme .navbar {
+    background-color: var(--navbar-bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+.navbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 50px;
+}
+
+.logo {
+    color: red;
+    font-size: 30px;
+    margin-left: 40px;
+}
+#accountButton{
+    color: white;
+}
+/* Menü listesi */
+.menu-list {
+    display: flex;
+    list-style: none;
+    column-gap: 30px;
+    padding: 0;
+}
+
+.menu-list-item {
+    cursor: pointer;
+    text-decoration: none;
+    color: #0800f9;
+    font-size: large;
+}
+
+.menu-list-item:hover, .menu-list-item.active {
+    font-weight: bold;
+}
+
+/* Profil */
+.profile-picture {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 0px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    cursor: pointer;
+}
+
+.profile-text-container {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    line-height: 1;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: white;
+    color: var(--text-color-light);
+    height: 100%;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    row-gap: 40px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+body.dark-theme .sidebar {
+    background-color: black;
+    color: var(--text-color-dark);
+}
+
+.sidebar i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Toggle */
+.toggle {
+    width: 40px;
+    background-color: white;
+    height: 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-icon {
+    color: goldenrod;
+}
+
+.toggle-ball {
+    width: 20px;
+    height: 21px;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    right: 1px;
+    transition: transform .5s ease;
+}
+
+body.light-theme .toggle-ball {
+    
+    background-color: var(--toggle-ball-light);
+    right: 1px;
+}
+
+body.dark-theme .toggle-ball {
+   
+    background-color: var(--toggle-ball-dark);
+    left: 1px;
+}
+
+/* Form ve Butonlar */
+#accountButton{
+    background-color: var(--button-bg-color-light);
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: var(--button-bg-color-light);
+    color: var(--text-color-light);
+    border: none;
+    border-radius: 5px;
+}
+
+body.dark-theme button {
+    background-color: var(--button-bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+.hidden {
+    display: none;
+}
+#registerForm{
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    }
+#formContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 10px;
+}
+
+body.dark-theme #formContainer {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+    border-color: var(--text-color-dark);
+}
+
+#closeButton, #backButton {
+    position: absolute;
+    top: 0px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+#closeButton {
+    right: 10px;
+}
+
+#backButton {
+    left: 10px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="button"], button[type="submit"] {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #1639d4;
+    color: white;
+}
+
+button[type="button"]:hover, button[type="submit"]:hover {
+    background-color: #45a049;
+}
+.movie-main{
+    display: flexbox;
+   height: 150vh;
+   
+}
+.movie-list-container {
+    display: flexbox;
+    margin-left: 50px;
+    color: white;
+    height: 400px;
+    margin-bottom: 20px;
+    column-gap: 40px;
+    row-gap: 40px;
+   
+}
+
+.movie-list-title {
+    margin-bottom: 10px;
+}
+
+.movie-list {
+    list-style: none;
+    padding: 0;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transform: translateX(0);
+    transition: 1s all ease-in-out;
+    margin-top: 80px;
+}
+
+.movie-list-wrapper {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+.movie-item-img {
+    margin: 20px 0px;
+    width: 290px;
+    height: 390px;
+    object-fit: cover;
+    transition: 1s all ease-in-out;
+}
+
+.movie-item {
+    position: relative;
+}
+
+.movie-item:hover .movie-item-buttons {
+    opacity: 1;
+    
+}
+
+.movie-item:hover .movie-item-img {
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+
+}
+
+.movie-item-buttons {
+    background-color: rgb(40, 40, 40, 0.4);
+    padding: 0 10px;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 50%;
+    left: 100px;
+    column-gap: 20px;
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+}
+
+.movie-item-buttons i {
+    cursor: pointer;
+    opacity: 0.5;
+    font-size: 20px;
+    transition: 0.5s all ease;
+}
+
+.movie-item-buttons i:hover {
+    opacity: 1;
+}
+/* movie list end */
