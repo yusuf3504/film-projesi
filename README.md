@@ -1,1 +1,1 @@
-Projeyi Görüntülemek İçin= https://hdfilim.netlify.app
+Projeyi Görüntülemek İçin= https://hdfilimizleme.netlify.app
